@@ -907,7 +907,7 @@ margin-bottom: 12px;
 font-size: 12px;
 line-height: 1.16em;
 letter-spacing: 0.01em;
-color:var(--secondary-wwhite-color);
+color:var(--primary-text-color);
 }
 .input{
   display: block;
@@ -921,9 +921,6 @@ color:var(--secondary-wwhite-color);
   cursor: pointer;
   padding-left: 42px;
   transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.input:focus, .input:hover{
-  border: var(--accent-color) 1px solid;
 }
 .textarea{
   width: 100%;
@@ -978,6 +975,10 @@ color: rgba(117, 117, 117, 0.5);
 .form--div:hover{
   color: var(--accent-color);
   cursor: pointer;
+}
+.form--div:focus,
+.form--div:hover>.input{
+    border: var(--accent-color) 1px solid;
 }
 .agreement{
 font-weight: 400;
