@@ -389,52 +389,50 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <form class="form js-speaker-form">
-                <h3 class="modal_title">Оставьте свои данные, мы вам перезвоним</h3>
-                <label class="label" for="user_name">Имя</label>
-                <div class="form--div" tabindex="0">
-                    <svg class="person_form">
+    <div class="backdrop backdropis-hidden" data-modal>
+        <div class="backdrop__modal">
+            <form class="modal__form js-speaker-form">
+                <h3 class="form__title">Оставьте свои данные, мы вам перезвоним</h3>
+                <label class="form__label" for="user_name">Имя</label>
+                <div class="form__container" tabindex="0">
+                    <svg class="form__icon">
                         <use href="./sprite.svg#person"></use>
                     </svg>
-                    <input class="input" type="text" name="name" id="user_name">
+                    <input class="form__input" type="text" name="name" id="user_name">
                 </div>
     
     
-                <label class="label" for="user_tel">Телефон</label>
-                <div class="form--div" tabindex="0">
-                    <svg class="person_form">
+                <label class="form__label" for="user_tel">Телефон</label>
+                <div class="form__container" tabindex="0">
+                    <svg class="form__icon">
                         <use href="./sprite.svg#phone"></use>
                     </svg>
-                    <input class="input" type="tel" name="tel" id="user_tel" />
+                    <input class="form__input" type="tel" name="tel" id="user_tel" />
                 </div>
     
-                <label class="label" for="user_email">Почта</label>
-                <div class="form--div" tabindex="0">
-                    <svg class="person_form">
+                <label class="form__label" for="user_email">Почта</label>
+                <div class="form__container" tabindex="0">
+                    <svg class="form__icon">
                         <use href="./sprite.svg#email"></use>
                     </svg>
-                    <input class="input" type="email" name="email" id="user_email" />
+                    <input class="form__input" type="email" name="email" id="user_email" />
                 </div>
     
     
-                <label class="label" for="user_comments">Комментарий</label>
-                <textarea class="textarea" name="comments" id="user_comments" placeholder="Введите текст" cols="5"
+                <label class="form__label" for="user_comments">Комментарий</label>
+                <textarea class="form__textarea" name="comments" id="user_comments" placeholder="Введите текст" cols="5"
                     rows="5"></textarea>
-                <label class="label_check">
-                    <input class="checkbox" type="checkbox" name="
-                        agreement" value="
-                        agreement" checked />
-                    <span class="person_agreement"></span>
-                    <span class="agreement">Соглашаюсь с рассылкой и принимаю&nbsp;</span>
-                    <a class="agreement__link" href="">Условия договора</a>
+                <label class="form__label--check">
+                    <input class="form__checkbox" type="checkbox" name="agreement" value="agreement" checked />
+                    <span class="form__person-agreement"></span>
+                    <span class="form__agreement">Соглашаюсь с рассылкой и принимаю&nbsp;</span>
+                    <a class="form__agreement--link" href="">Условия договора</a>
                 </label>
     
-                <button class="hero__button sub" type="submit">Отправить</button>
+                <button class="hero__button form__button" type="submit">Отправить</button>
             </form>
-            <button class="close" data-modal-close>
-                <svg class="svg">
+            <button class="modal__close" data-modal-close>
+                <svg class="modal__icon">
                     <use href="./sprite.svg#close"></use>
                 </svg>
             </button>
