@@ -38,6 +38,8 @@ button{
 }
 img{
     display: block;
+    max-width: 100%;
+    max-height: auto;
 }
 /*header*/
 .header{
@@ -494,7 +496,6 @@ img{
     list-style: none;
     margin-top: 0%;
     margin-bottom: 0%;
-
 }
 .clients__list>li:not(:last-child){
     margin-right: 30px;
@@ -565,7 +566,7 @@ img{
     display: block;
     color: var(--primary-white-color);
     margin-bottom: 20px;
-    font-family: Raleway,sans-serif
+    font-family: Raleway,sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19em;
@@ -802,8 +803,6 @@ img{
 .portfolio__img{
     display: flex;
     position: relative;
-    width: 370px;
-    height: 294px;
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
@@ -833,7 +832,6 @@ img{
 .portfolio__item:focus .portfolio_overlay{
     opacity: 1;
     transform: translateY(0%)}
-  
 .portfolio__item:hover .portfolio_overlay{
     opacity: 1;
     transform: translateY(0%)}
@@ -863,10 +861,6 @@ img{
     padding: 40px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-}
-.form__label--check{
-    display: flex;
-    padding-left: 30px;
 }
 .modal__close{
     position: absolute;
@@ -931,7 +925,6 @@ img{
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize:none;
-    margin-bottom: 20px;
     cursor: pointer;
     padding: 16px;
     transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -946,22 +939,11 @@ img{
 .form__textarea:focus{
     border: var(--accent-color) 1px solid;
 }
-.form__checkbox{
-    margin-top: 0%;
-    margin-bottom: 30px;
-    color: var(--logo-color);
-}
-.form__button{display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form__button:hover,
-.form__button:focus{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
 .form__container:focus-within>.form__icon{
     fill: var(--accent-color);
+}
+.form__container:hover> .form__icon{
+    color: var(--accent-color);
 }
 .form__icon{
     position: absolute;
@@ -978,8 +960,8 @@ img{
     color: var(--title-color);
     transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form__container:focus,
-.form__container:hover{
+.form__input:focus,
+.form__input:hover>.form__icon{
     color: var(--accent-color);
     cursor: pointer;
 }
@@ -987,31 +969,42 @@ img{
 .form__container:hover>.form__input{
     border: var(--accent-color) 1px solid;
 }
-.form__agreement{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.17em;
-    margin-left: 7px;
-    display: inline-block;
-    margin-bottom: 29px;
-}
-.form__agreement--link{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.17em;
-    text-decoration-line: underline;
-    color: var(--accent-color);
-}
 .form__checkbox{
-    appearance: none;
-    position: relative;}
-.form__person-agreement{
-    position: absolute;
-    width: 16px;height: 15px;
-    background-image: url(../img/Vector.svg);
-    background-size: contain;
-    margin-left: -20px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 13px;
+    margin-bottom: 30px;
+    margin-top: 17px;
 }
-.form__checkbox:checked + .form__person-agreement{
+.checkbox__agreement{
+    display: inline-flex;
+    align-items: center;
+}
+.checkbox__agreement::before{
+    content: "";
+    width: 16px;
+    height: 15px;
+    background-image: url(../img/Vector.svg);
+    display: inline-flex;
+    margin-right: 7px;
+    align-items: center;
+}
+.checkbox__checkbox{
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    outline: none;
+}
+.checkbox__checkbox:focus + .checkbox__agreement::before{
+    
+    outline: var(--title-color) 1.5px solid;
+}
+.checkbox__checkbox:checked + .checkbox__agreement::before{
     background-image: url(../img/icon\ check.svg);
+}
+.checkbox__link{
+    color: var(--accent-color);
+    text-decoration:underline;
 }
