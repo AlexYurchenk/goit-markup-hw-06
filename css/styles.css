@@ -998,8 +998,7 @@ img{
     outline: none;
 }
 .checkbox__checkbox:focus + .checkbox__agreement::before{
-    
-    outline: var(--title-color) 1.5px solid;
+     outline: var(--title-color) 1.5px solid;
 }
 .checkbox__checkbox:checked + .checkbox__agreement::before{
     background-image: url(../img/icon\ check.svg);
